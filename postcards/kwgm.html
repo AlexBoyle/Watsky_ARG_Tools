@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>KWGM Postcards</title>
+		<link rel="stylesheet" href="./kwgmpostcards.css">
+	</head>
+	<body>
+		<main>
+			
+			<h1 class="center">KWGM Postcards</h1>
+			<div>
+				Group By: 
+				<a href="#" onclick="setFilter('');generatePostcards()">all</a>
+				<a href="#" onclick="setFilter('st');generatePostcards()">state</a>
+				<a href="#" onclick="setFilter('color');generatePostcards()">color</a>
+				<a href="#" onclick="setFilter('index');generatePostcards()">positon</a>
+			</div>
+			<br>
+			<div>4 PIECES ARE WAITING FOR TOMMY DESIGNER IN <u>{StateAbr}</u> AT {5_boxes}</div>
+			<div id="postcards"></div>
+		</main>
+
+		<div id="container"/>
+		<script src="kwgmpostcard.js"></script>
+	</body>
+</html>
