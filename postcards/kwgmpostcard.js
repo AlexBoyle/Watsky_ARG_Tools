@@ -65,6 +65,7 @@
 			if(mode) {
 			for (let card of postcardData[id]) group.appendChild(genCard(card));
 			parent.append(group);
+			parent.append(document.createElement('hr'));
 			} else {
 			createDraggableArea(postcardData[id])
 			}
