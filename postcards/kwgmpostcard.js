@@ -20,6 +20,9 @@
 	  {id: 16, st: 'IL', dots: [6, 4], index: 0, color: "green"},
 	  {id: 17, st: 'CO', dots: [9], index: 4, color: "blue"},
 	  {id: 18, st: 'CO', dots: [9], index: 0, color: "green"},
+	  {id: 19, st: 'WA', dots: [12,8], index: 3, color: "red"},
+	  {id: 20, st: 'TN', dots: [9], index: 1, color: "red"},
+	  
 	];
 	window.onload = () => { window.generatePostcards(); }
 	let genCard = function(card) {
