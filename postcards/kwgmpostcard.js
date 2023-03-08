@@ -1,4 +1,4 @@
-(() => {
+(() => { 
 	let filter = "";
 	let postcards = [
 	  {id: 0, st: 'NY', dots: [6, 7], index: 4, color: "yellow"},
