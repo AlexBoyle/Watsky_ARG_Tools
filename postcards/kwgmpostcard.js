@@ -36,6 +36,7 @@
 		header.innerHTML = `${card.st}`;
 		container.appendChild(header);
 		let boxes = document.createElement('div');
+		boxes.classList.add('bod')
 		for (let i = 0; i < 5; i++) {
 			let box = document.createElement('span');
 			box.classList.add('box');

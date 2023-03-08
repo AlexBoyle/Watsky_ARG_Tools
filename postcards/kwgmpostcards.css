@@ -34,6 +34,11 @@ nav {
   text-align: center;
 }
 
+.bod {
+	width: 80px;
+	margin:auto;
+}
+
 .box {
   width: 10px;
   height: 10px;
