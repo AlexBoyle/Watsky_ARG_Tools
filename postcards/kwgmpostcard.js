@@ -24,8 +24,9 @@
 	  {id: 19, st: 'WA', dots: [12,8], index: 3, color: "red"},
 	  {id: 20, st: 'TN', dots: [7], index: 1, color: "red"},
 	  {id: 21, st: 'MI', dots: [10], index: 4, color: "red"},
-	  {id: 21, st: 'IL', dots: [13], index: 2, color: "red"},
-	  {id: 21, st: 'MI', dots: [6,7], index: 3, color: "yellow"},
+	  {id: 22, st: 'IL', dots: [13], index: 2, color: "red"},
+	  {id: 23, st: 'MI', dots: [6,7], index: 3, color: "yellow"},
+	  {id: 24, st: 'MA', dots: [6], index: 2, color: "red"},
 	  
 	];
 	window.onload = () => { window.generatePostcards(); }
