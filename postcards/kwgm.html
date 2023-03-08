@@ -17,12 +17,19 @@
 				<a href="#" onclick="setFilter('color');generatePostcards()">color</a>
 				<a href="#" onclick="setFilter('index');generatePostcards()">positon</a>
 			</div>
+			<div style="margin-top: 5px;margin-bottom: 5px">
+				Mode: 
+				<a href="#" onclick="setMode(true);generatePostcards()">non-draggable</a>
+				<a href="#" onclick="setMode(false);generatePostcards()">draggable</a>
+			</div>
 			<br>
 			<div>4 PIECES ARE WAITING FOR TOMMY DESIGNER IN <u>{StateAbr}</u> AT {5_boxes}</div>
+			<div id="cont"></div>
 			<div id="postcards"></div>
 		</main>
-
-		<div id="container"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/Draggable.min.js"></script>
 		<script src="kwgmpostcard.js"></script>
 	</body>
 </html>
