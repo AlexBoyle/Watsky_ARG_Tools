@@ -2,33 +2,37 @@
 	let filter = "";
 	let mode = true;
 	let postcards = [
-	  {id: 0, st: 'NY', dots: [6, 7], index: 4, color: "yellow"},
-	  {id: 1, st: 'FL', dots: [8, 4], index: 2, color: "blue"},
-	  {id: 2, st: 'MA', dots: [3, 5], index: 4, color: "yellow"},
-	  {id: 3, st: 'NV', dots: [7, 4], index: 0, color: "blue"},
-	  {id: 4, st: 'FL', dots: [9], index: 0, color: "yellow"},
-	  {id: 5, st: 'MO', dots: [7], index: 0, color: "yellow"},
-	  {id: 6, st: 'LA', dots: [10], index: 2, color: "yellow"},
-	  {id: 7, st: 'VA', dots: [8], index: 1, color: "green"},
-	  {id: 8, st: 'VA', dots: [10], index: 3, color: "red"},
-	  {id: 9, st: 'TN', dots: [5, 6], index: 1, color: "green"},
-	  {id: 10, st: 'IN', dots: [12],index: 4, color: "red"},
-	  {id: 11, st: 'CA', dots: [7], index: 0, color: "green"},
-	  {id: 12, st: 'AZ', dots: [6], index: 3, color: "red"},
-	  {id: 13, st: 'NC', dots: [6], index: 3, color: "green"},
-	  {id: 14, st: 'NM', dots: [4, 5], index: 0, color: "green"},
-	  {id: 15, st: 'NV', dots: [4, 6], index: 0, color: "red"},
-	  {id: 16, st: 'IL', dots: [6, 4], index: 0, color: "green"},
-	  {id: 17, st: 'CO', dots: [9], index: 4, color: "blue"},
-	  {id: 18, st: 'CO', dots: [9], index: 0, color: "green"},
-	  {id: 19, st: 'WA', dots: [12,8], index: 3, color: "red"},
-	  {id: 20, st: 'TN', dots: [7], index: 1, color: "red"},
-	  {id: 21, st: 'MI', dots: [10], index: 4, color: "red"},
-	  {id: 22, st: 'IL', dots: [13], index: 2, color: "red"},
-	  {id: 23, st: 'MI', dots: [6,7], index: 3, color: "yellow"},
-	  {id: 24, st: 'MA', dots: [6], index: 2, color: "red"},
-	  {id: 25, st: 'MI', dots: [4, 6], index: 1, color: "blue"},
-	  
+		{id: 01, st: 'AZ', dots: [6]	, index: 3, color: "red"	, zip: "8----"},
+		{id: 02, st: 'CA', dots: [7]	, index: 0, color: "green"	, zip: "9----"},
+		{id: 03, st: 'CO', dots: [9]	, index: 4, color: "blue"	, zip: "8----"},
+		{id: 04, st: 'CO', dots: [9]	, index: 0, color: "green"	, zip: "8----"},
+		{id: 05, st: 'DC', dots: [8]	, index: 2, color: "yellow"	, zip: "2----"},
+		{id: 06, st: 'FL', dots: [8, 4]	, index: 2, color: "blue"	, zip: "3----"},
+		{id: 07, st: 'FL', dots: [9]	, index: 0, color: "yellow"	, zip: "3----"},
+		{id: 08, st: 'FL', dots: [7]	, index: 1, color: "green"	, zip: "3----"},
+		{id: 09, st: 'IL', dots: [6, 4]	, index: 0, color: "green"	, zip: "6----"},
+		{id: 10, st: 'IL', dots: [13]	, index: 2, color: "red"	, zip: "6----"},
+		{id: 11, st: 'IN', dots: [12]	, index: 4, color: "red"	, zip: "4----"},
+		{id: 12, st: 'LA', dots: [10]	, index: 2, color: "yellow"	, zip: "7----"},
+		{id: 13, st: 'MA', dots: [3, 5]	, index: 4, color: "yellow"	, zip: "0----"},
+		{id: 14, st: 'MA', dots: [6]	, index: 2, color: "red"	, zip: "0----"},
+		{id: 15, st: 'MI', dots: [10]	, index: 4, color: "red"	, zip: "4----"},
+		{id: 16, st: 'MI', dots: [6,7]	, index: 3, color: "yellow"	, zip: "4----"},
+		{id: 17, st: 'MI', dots: [4, 6]	, index: 1, color: "blue"	, zip: "4----"},
+		{id: 18, st: 'MO', dots: [7]	, index: 0, color: "yellow"	, zip: "6----"},
+		{id: 19, st: 'MO', dots: [11]	, index: 1, color: "red"	, zip: "6----"},
+		{id: 20, st: 'NC', dots: [6]	, index: 3, color: "green"	, zip: "2----"},
+		{id: 21, st: 'NM', dots: [4, 5]	, index: 0, color: "green"	, zip: "8----"},
+		{id: 22, st: 'NV', dots: [7, 4]	, index: 0, color: "blue"	, zip: "8----"},
+		{id: 23, st: 'NV', dots: [4, 6]	, index: 0, color: "red"	, zip: "8----"},
+		{id: 24, st: 'NV', dots: [5]	, index: 1, color: "yellow"	, zip: "8----"},
+		{id: 25, st: 'NY', dots: [6, 7]	, index: 4, color: "yellow"	, zip: "0----"},
+		{id: 26, st: 'OR', dots: [7]	, index: 4, color: "blue"	, zip: "9----"},
+		{id: 27, st: 'TN', dots: [5, 6]	, index: 1, color: "green"	, zip: "3----"},
+		{id: 28, st: 'TN', dots: [7]	, index: 1, color: "red"	, zip: "3----"},
+		{id: 29, st: 'VA', dots: [8]	, index: 1, color: "green"	, zip: "2----"},
+		{id: 30, st: 'VA', dots: [10]	, index: 3, color: "red"	, zip: "2----"},
+		{id: 31, st: 'WA', dots: [12,8]	, index: 3, color: "red"	, zip: "9----"},
 	];
 	window.onload = () => { window.generatePostcards(); }
 	let genCard = function(card) {
@@ -43,6 +47,7 @@
 		for (let i = 0; i < 5; i++) {
 			let box = document.createElement('span');
 			box.classList.add('box');
+			box.innerHTML = "<center>" + card.zip[i] + "<center/>"
 			if(i === card.index) box.classList.add(card.color[0]);
 			boxes.appendChild(box);
 		}
@@ -62,15 +67,17 @@
 		let postcardData = [];
 		if(filter === "") { postcardData = postcards.reduce((out, item) => { (out[item[0]] = [...out[item[filter]] || [], item]); return out; }, {}) }
 		else { postcardData = postcards.reduce((out, item) => { (out[item[filter]] = [...out[item[filter]] || [], item]); return out; }, {}) }
-		for (let id in postcardData) {
+		let keys = Object.keys(postcardData).sort()
+		for (let i in keys) {
+			console.log(keys[i])
 			let group = document.createElement('div');
-			postcardData[id].sort((a,b) => a.index - b.index);
+			postcardData[keys[i]].sort((a,b) => a.index - b.index);
 			if(mode) {
-			for (let card of postcardData[id]) group.appendChild(genCard(card));
+			for (let card of postcardData[keys[i]]) group.appendChild(genCard(card));
 			parent.append(group);
 			parent.append(document.createElement('hr'));
 			} else {
-			createDraggableArea(postcardData[id])
+			createDraggableArea(postcardData[keys[i]])
 			}
 		}
 	}

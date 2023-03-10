@@ -35,13 +35,13 @@ nav {
 }
 
 .bod {
-	width: 80px;
+	#width: 80px;
 	margin:auto;
 }
 
 .box {
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   margin: 3px;
   background-color: #999;
   border: 1px black solid;
@@ -58,7 +58,7 @@ nav {
 }
 
 .b {
-  background-color: Blue;
+  background-color: #00FFFF;
 }
 
 .y {
