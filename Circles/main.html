@@ -1,0 +1,190 @@
+
+<script src="svgHelper.js"></script>
+<link rel="stylesheet" href="main.css">
+hello
+<div class="wrapper">
+	<div class="svg-container" style="max-width:100%; max-height:100%">
+		<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+		<circle cx="50" cy="50" r="45" stroke="black" stroke-width=".5" fill="#c2534c" />
+		<circle cx="50" cy="50" r="35" stroke="black" stroke-width=".5" fill="#a6b545" />
+		<circle cx="50" cy="50" r="25" stroke="black" stroke-width=".5" fill="#2f9433" />
+		<circle cx="50" cy="50" r="15" stroke="black" stroke-width=".5" fill="#325bad" />
+		<circle cx="50" cy="50" r="5" stroke="black" stroke-width=".5" fill="black" />
+			<defs>
+				<marker id="arrowhead" markerWidth="4" markerHeight="3" refX="0" refY="1.5" orient="auto">
+					<polygon points="0 0, 4 1.5, 0 3" />
+				</marker>
+				<polygon points="0,-60 10,-50 0,-55 -10,-50" class="box" id="box" />
+				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+			</defs>
+		</svg>
+	</div>
+</div>
+<script>
+let svgHelper = new SVGHelper(document.getElementById("svg"));
+let redRing = [
+	{st: 'CA'},
+	{st: '  '},
+	{st: 'FL'},
+	{st: 'TN'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'UT'},
+	{st: 'TX'},
+	{st: 'NY'},
+	{st: 'OR'},
+	{st: 'DC'},
+	{st: 'OK'},
+	{st: '  '},
+	{st: 'MI'},
+	{st: 'NV'},
+	{st: 'IN'},
+	{st: 'CO'},
+	{st: '  '},
+	{st: 'AZ'},
+	{st: '  '},
+	{st: '  '},
+	{st: '  '},
+	{st: '  '},
+	{st: 'IL'},
+	{st: 'WI'},
+	{st: 'WA'},
+	{st: 'KS'},
+]
+let yellowRing = [
+	{st: 'IN'},
+	{st: '  '},
+	{st: '  '},
+	{st: '  '},
+	{st: '  '},
+	{st: 'TX'},
+	{st: 'OK'},
+	{st: '  '},
+	{st: 'IL'},
+	{st: '  '},
+	{st: 'CO'},
+	{st: 'MI'},
+	{st: 'CA'},
+	{st: '  '},
+	{st: 'AZ'},
+	{st: 'UT'},
+	{st: '  '},
+	{st: 'KS'},
+	{st: 'TN'},
+	{st: 'WI'},
+	{st: '  '},
+	{st: 'NY'},
+	{st: 'WA'},
+	{st: 'NV'},
+	{st: 'DC'},
+	{st: 'FL'},
+	{st: 'OR'},
+]
+let greenRing = [
+	{st: 'WA'},
+	{st: 'IL'},
+	{st: 'KS'},
+	{st: 'OR'},
+	{st: 'CA'},
+	{st: '  '},
+	{st: 'UT'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'NY'},
+	{st: 'NV'},
+	{st: 'OK'},
+	{st: 'TN'},
+	{st: 'DC'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'AZ'},
+	{st: 'MI'},
+	{st: 'TX'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'WI'},
+	{st: 'CO'},
+	{st: 'FL'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'IN'},
+]
+let blueRing = [
+	{st: '  '},
+	{st: 'DC'},
+	{st: '  '},
+	{st: 'OK'},
+	{st: '  '},
+	{st: 'WI'},
+	{st: 'MI'},
+	{st: 'TX'},
+	{st: 'CA'},
+	{st: 'IN'},
+	{st: 'AZ'},
+	{st: 'IL'},
+	{st: 'OR'},
+	{st: '  '},
+	{st: 'NV'},
+	{st: 'TN'},
+	{st: '  '},
+	{st: 'UT'},
+	{st: 'WA'},
+	{st: '  '},
+	{st: 'KS'},
+	{st: 'CO'},
+	{st: '  '},
+	{st: '  '},
+	{st: 'NY'},
+	{st: '  '},
+	{st: 'FL'},
+]
+
+
+
+
+
+
+
+let centerX = 50;
+let centerY = 50
+for(var i = 0; i < 27; i++) {
+	let m = ((2*3.1415*100)*((i+1)/27))
+	console.log(Math.sin(m)*100)
+	console.log(Math.cos(m)*100)
+	let eX = (Math.sin(m)*100) + centerX
+	let eY = (Math.cos(m)*100) + centerY
+	svgHelper.addLine({x: centerX, y: centerY}, {x: eX, y: eY})
+}
+/*
+for(var i = 0; i < 27; i ++) {
+	let m = ((2*3.1415*1)*((((i+13)%27)+1)/27))
+	let eX = (Math.sin(m-.06)*38) + centerX
+	let eY = (Math.cos(m-.06)*38) + centerY
+	
+	svgHelper.addText({x: eX-1, y: eY}, redRing[i].st)
+}
+for(var i = 0; i < 27; i ++) {
+	let m = ((2*3.1415*1)*((((i+13)%27)+1)/27))
+	let eX = (Math.sin(m-.1)*28) + centerX
+	let eY = (Math.cos(m-.1)*28) + centerY
+	svgHelper.addText({x: eX-1, y: eY-1}, yellowRing[i].st)
+}
+for(var i = 0; i < 27; i ++) {
+	let m = ((2*3.1415*1)*((((i+13)%27)+1)/27))
+	let eX = (Math.sin(m-.06)*19) + centerX
+	let eY = (Math.cos(m-.06)*19) + centerY
+	svgHelper.addText({x: eX, y: eY}, greenRing[i].st)
+}
+for(var i = 0; i < 27; i ++) {
+	let m = ((2*3.1415*1)*((((i+13)%27)+1)/27))
+	let eX = (Math.sin(m-.06)*11) + centerX
+	let eY = (Math.cos(m-.06)*11) + centerY
+	svgHelper.addText({x: eX, y: eY}, blueRing[i].st)
+}
+*/
+
+
+
+
+
+</script>

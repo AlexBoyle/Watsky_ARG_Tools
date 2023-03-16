@@ -65,7 +65,7 @@
 		console.log("FILE READ")
 		let allLyrics = " " + lyrics.join("  ").toLowerCase() + " ";
 		console.log("")
-		console.log(findMatches(allLyrics, / [a-z]{13} /g).sort())
+		console.log(findMatches(allLyrics, / [b-z\-]{9} [b-z\-]{9} /g).sort())
 
 	});;
 	
