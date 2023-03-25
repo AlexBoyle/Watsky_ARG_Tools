@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+	gap: 10px;
+
+.col1 {
+
+  flex: 1;    
+}
+.colS {
+  flex: 2; 
+}
