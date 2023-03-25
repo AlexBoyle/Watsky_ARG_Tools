@@ -68,6 +68,8 @@ let solve = function(rot1, rot2, rot3, rot4) {
 }
 for(var i = 0; i < 27; i++){for(var j = 0; j < 27; j++){for(var k = 0; k < 27; k++){for(var m = 0; m < 27; m++){
 	let sol = solve(i, j, k, m);
-	if(sol != null)
+	if(sol != null) {
+		console.log([i,j,k,m])
 		console.log(sol);
+	}
 }}}}
